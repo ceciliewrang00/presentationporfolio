@@ -63,12 +63,12 @@ body {
   font-size: 120%;
 }
 
-.menu-element {
+.menu--element {
   color: #0A2342;
   text-decoration: none;
 }
 
-.menu-element:active {
+.menu--element:active {
   color: #DCEBFA;
 }
 
