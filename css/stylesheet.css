@@ -63,12 +63,12 @@ body {
   font-size: 120%;
 }
 
-a {
+.menu-element {
   color: #0A2342;
   text-decoration: none;
 }
 
-a:active {
+.menu-element:active {
   color: #DCEBFA;
 }
 
@@ -131,7 +131,7 @@ a:active {
             "header . menu"
             "main main main"
             "footer footer footer";
-        grid-template-columns: 2fr 1fr 4fr;
+        grid-template-columns: 2fr 2fr 4fr;
         grid-template-rows: 90px auto 100px;
     }
 }
