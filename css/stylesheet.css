@@ -8,7 +8,7 @@
 body {
     max-width: 1200px;
     background-color: #EAD9C5;
-    color: #0A2342;
+    color: #28446C;
     font-family: sans-serif;
     margin: 0;
 }
@@ -48,16 +48,19 @@ body {
 .footer { grid-area: footer; }
 
 .logo {
+  height: 125%;
   width: 100px;
-  height: auto;
-  transition: ease-in-out 0.5s;
+  padding: 10px;
+  transition: ease-in-out;
+  transition-duration: 0.5s;
 }
 
 .logo:hover {
-  width: 110px;
+  width: 115px;
 }
 
 .menu ul {
+  border-top: #F8F3ED 2px solid;
   list-style: none;
   display: flex;
   font-size: 20px;
@@ -68,6 +71,7 @@ body {
 /* Media query: 800px+ */
 @media (min-width: 800px) {
     .menu ul {
+      border-top: none;
       font-size: 25px;
       padding-top: 30px;
     }}
@@ -92,26 +96,36 @@ body {
 
 /* Main setup*/
 .main {
-  background-color: #F4EBE1;
+  background-color: #F8F3ED;
   display: grid;
   grid-template-areas:
       "title"
       "carrusel"
       "contact";
-  grid-template-rows: 400px 400px 400px;
+  grid-template-rows: 350px auto auto;
   grid-template-columns: auto;
 }
 
 /* Title on landingpage setup */
-.pagetitle {
-  padding: 50px 0;
+.title {
+  padding: 30px 0 25px 0;
+}
+#title-landingpage{
+  background: url(../image/palmer.webp);
+  width: 800px;
+}
+
+.landingpagetitle--change {
+  width: 750px;
+  height: auto;
 }
 
 .landingpagetitle--change::after {
-  color: #33598A;
+  color: #0A2342;
   content: "FRONTEND DESIGN";
   animation: changetext 10s infinite;
 }
+
 
 @keyframes changetext {
   0%   { content: "FRONTEND DESIGN"; }
@@ -126,17 +140,16 @@ body {
 .carousel {
   background-color: #EAD9C5;
   display: flex;
+  flex-direction: column;
   justify-content: center; /* centrerer horisontalt */
   align-items: center;     /* centrerer vertikalt */
-  padding-top: 20px;
-  padding-bottom: 20px;
+  gap: 15px;
+  height: 500px;
 }
-
 
 .carousel--viewport {
   position: relative;
-  height: 350px;
-  overflow: hidden;
+  height: 500px;
   padding: 0 10%;
   width: 100%;
   max-width: 900px;
@@ -147,44 +160,53 @@ body {
 .carousel--viewport--item {
   position: absolute;
   width: 400px;            /* ét item på mobil */
-  height: 100%;
+  height: 325px;
   opacity: 0;
   pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
+  background-color: #F8F3ED;
   color: #0A2342;
-  border-radius: 8px;
   transition: opacity .2s;
   z-index: 0;
+  gap: 20px;
+  border-radius: 5%;
+}
+
+.dark-button {
+  background-color: #28446C;
+  color: #F8F3ED;
+  border: 1px solid #0A2342;
+  padding: 10px;
+  border-radius: 15px;
+  width: 150px;
+}
+
+.dark-button:hover {
+  background-color: #0A2342;
 }
 
 /* ITEMS ONEonONE */
 #item1 { 
-  animation: item1Anim 20s infinite linear;
-  background: aquamarine; 
+  animation: item1Anim 15s infinite linear;
 }
 
 #item2 { 
-  animation: item2Anim 20s infinite linear;
-  background: blanchedalmond; 
+  animation: item2Anim 15s infinite linear;
 }
 #item3 { 
-  animation: item3Anim 20s infinite linear;
-  background: #ffd6a5; 
+  animation: item3Anim 15s infinite linear;
 }
 #item4 { 
-  animation: item4Anim 20s infinite linear;
-  background: #caffbf; 
+  animation: item4Anim 15s infinite linear;
 }
 #item5 { 
-  animation: item5Anim 20s infinite linear;
-  background: #9bf6ff; 
+  animation: item5Anim 15s infinite linear;
 }
 #item6 { 
-  animation: item6Anim 20s infinite linear;
-  background: #bdb2ff; 
+  animation: item6Anim 15s infinite linear;
 }
 
 .carousel--viewport--item {
@@ -247,7 +269,7 @@ body {
   }
 
   .carousel--viewport li {
-    width: 45%;           /* to items side om side */
+    width: 43%;           /* to items side om side */
   }
 
   :root {
@@ -256,15 +278,9 @@ body {
   }
 }
 
-
-
-
-.contact {
-  padding-top: 50px;
-}
-
 /* Footer setup */
 .footer {
-  background-color: #EAD9C5;
+  background-color: #F8F3ED;
+  height: 100px;
 }
 
