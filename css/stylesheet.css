@@ -112,12 +112,10 @@ body {
 }
 #title-landingpage{
   background: url(../image/palmer.webp);
-  width: 800px;
+  width:auto;
 }
-
-.landingpagetitle--change {
-  width: 750px;
-  height: auto;
+#landingpage-startimage {
+  display: none;
 }
 
 .landingpagetitle--change::after {
@@ -125,7 +123,6 @@ body {
   content: "FRONTEND DESIGN";
   animation: changetext 10s infinite;
 }
-
 
 @keyframes changetext {
   0%   { content: "FRONTEND DESIGN"; }
@@ -135,6 +132,43 @@ body {
   80%  { content: "CREATE PRINT MATERIAL"; }
   100% { content: "FRONTEND DESIGN"; }
 }
+/* Media query: 800px+ */
+@media (min-width: 800px) {
+
+  #title-landingpage {
+    background: none;
+    display: grid;
+    grid-template-areas: 
+      "landingpage-fixedtitle landingpage-startimage"
+      "landingpagetitle--change landingpage-startimage";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #landingpage-startimage {
+    display: block; /*  ←  VIGTIG! Ellers forbliver den skjult */
+    grid-area: landingpage-startimage;
+    width: 100%;
+  }
+
+  #landingpage-startimage img {
+    width: 90%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    margin-top: 30px;
+  }
+
+  .landingpagetitle {
+    grid-area: landingpage-fixedtitle;
+  }
+
+  .titlechange {
+    grid-area: landingpagetitle--change;
+  }
+}
+
+
 
 /* Project carousel setup */
 .carousel {
