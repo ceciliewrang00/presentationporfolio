@@ -13,13 +13,13 @@ body {
     margin: 0;
 }
 
-.gridcontainer > * {
+.sitesetup > * {
     background-color: #EAD9C5;
     text-align: center;
     font-size: 30px;
 }
 
-.gridcontainer {
+.sitesetup {
     display: grid;
     grid-template-areas: 
       "header"
@@ -30,6 +30,17 @@ body {
     grid-gap: 3px;
     margin: 0 auto;
 }
+
+/* Media query: 800px+ */
+@media (min-width: 800px) {
+  .sitesetup {
+    grid-template-areas:
+        "header . menu"
+        "main main main"
+        "footer footer footer";
+    grid-template-columns: 2fr 2fr 4fr;
+    grid-template-rows: 90px auto 100px;
+  }}
 
 .header { grid-area: header; }
 .menu   { grid-area: menu; }
@@ -53,6 +64,13 @@ body {
   justify-content: center;
   padding-top: 15px;
 }
+
+/* Media query: 800px+ */
+@media (min-width: 800px) {
+    .menu ul {
+      font-size: 25px;
+      padding-top: 30px;
+    }}
 
 .menu ul li {
   transition: ease-in-out 0.5s;
@@ -84,12 +102,12 @@ body {
   grid-template-columns: auto;
 }
 
-/* Title setup */
-.title {
-  padding-top: 50px;
+/* Title on landingpage setup */
+.pagetitle {
+  padding: 50px 0;
 }
 
-.change-title::after {
+.landingpagetitle--change::after {
   color: #33598A;
   content: "FRONTEND DESIGN";
   animation: changetext 10s infinite;
@@ -105,7 +123,7 @@ body {
 }
 
 /* Project carousel setup */
-.carrusel {
+.carousel {
   background-color: #EAD9C5;
   padding-top: 50px;
 }
@@ -116,22 +134,6 @@ body {
 
 /* Footer setup */
 .footer {
-  background-color: rgb(184, 112, 24);
+  background-color: #EAD9C5;
 }
 
-/* Media query: 800px+ */
-@media (min-width: 800px) {
-    .menu ul {
-      font-size: 25px;
-      padding-top: 30px;
-    }
-
-    .gridcontainer {
-        grid-template-areas:
-            "header . menu"
-            "main main main"
-            "footer footer footer";
-        grid-template-columns: 2fr 2fr 4fr;
-        grid-template-rows: 90px auto 100px;
-    }
-}
