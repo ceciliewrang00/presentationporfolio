@@ -108,7 +108,7 @@ body {
 
 /* Title on landingpage setup */
 .title {
-  padding: 30px 0 25px 0;
+  padding: 30px 0 15px 0;
   color: #28446C;
 }
 #title-landingpage{
@@ -226,23 +226,23 @@ body {
 
 /* ITEMS ONEonONE */
 #item1 { 
-  animation: item1Anim 15s infinite linear;
+  animation: item1Anim 15s infinite;
 }
 
 #item2 { 
-  animation: item2Anim 15s infinite linear;
+  animation: item2Anim 15s infinite;
 }
 #item3 { 
-  animation: item3Anim 15s infinite linear;
+  animation: item3Anim 15s infinite;
 }
 #item4 { 
-  animation: item4Anim 15s infinite linear;
+  animation: item4Anim 15s infinite;
 }
 #item5 { 
-  animation: item5Anim 15s infinite linear;
+  animation: item5Anim 15s infinite;
 }
 #item6 { 
-  animation: item6Anim 15s infinite linear;
+  animation: item6Anim 15s infinite;
 }
 
 .carousel--viewport--item {
