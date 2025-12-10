@@ -303,14 +303,17 @@ main{
 }
 
 /* BIG SCREEN */
-@media (min-width: 750px) {
+@media (min-width: 800px) {
   .carousel--viewport {
     height: 350px;       /* lidt højere */
     padding: 2% 5%;
   }
-
+  .carousel--viewport--item--image {
+    width: 200px;
+    height: auto;
+  }
   .carousel--viewport li {
-    width: 45%;           /* to items side om side */
+    width: 40%;           /* to items side om side */
   }
 
   :root {
