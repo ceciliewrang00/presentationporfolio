@@ -95,11 +95,13 @@ body {
 }
 
 /* Main setup*/
-.main {
+main{
   background-color: #F8F3ED;
+}
+.main-landingpage {
   display: grid;
   grid-template-areas:
-      "title"
+      "title-landingpage"
       "carrusel"
       "contact";
   grid-template-rows: 350px auto auto;
@@ -111,9 +113,12 @@ body {
   padding: 30px 0 15px 0;
   color: #28446C;
 }
-#title-landingpage{
+.title-landingpage{
+  grid-area: title-landingpage;
   background: url(../image/palmer.webp);
-  width:auto;
+  width: auto;
+  padding: 30px 0 15px 0;
+  color: #28446C;
 }
 #landingpage-startimage {
   display: none;
