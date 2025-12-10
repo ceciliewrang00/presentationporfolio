@@ -36,15 +36,15 @@ body {
   .sitesetup {
     grid-template-areas:
         "header . menu"
-        "main main main"
+        "main1 main1 main1"
         "footer footer footer";
     grid-template-columns: 2fr 2fr 4fr;
     grid-template-rows: 90px auto auto;
   }}
 
 .header { grid-area: header; }
-.menu   { grid-area: menu; }
-.main   { grid-area: main; }
+.menu { grid-area: menu; }
+.main-landingpage { grid-area: main1; }
 .footer { grid-area: footer; }
 
 .logo {
@@ -95,7 +95,7 @@ body {
 }
 
 /* Main setup*/
-.main {
+.main-landingpage {
   background-color: #F8F3ED;
   display: grid;
   grid-template-areas:
