@@ -392,6 +392,7 @@ label {
   height: 70px;
 }
 
+/* Big screen - contact page */
 @media (min-width: 800px) {
   #main-contact {
     margin: auto;
@@ -405,4 +406,56 @@ label {
     width: 400px;
     margin: auto 0px 220px 0px;
   }
+}
+
+/* About me page - Top part */
+.about-me {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.about-me--textbox {
+  width: 470px;
+  margin: auto;
+}
+
+.potrat {
+  background-color: #F8F3ED;
+  height: 400px;
+  width: 300px;
+  margin: 30px auto 30px auto;
+  box-shadow: 5px 5px 20px;
+  border-radius: 15px;
+}
+
+/* Big screen - about page top part */
+@media (min-width: 800px) {
+  .about-me {
+    flex-direction: row;
+  }
+  .about-me--textbox {
+    margin: 60px auto 30px auto;
+  }
+}
+
+.tools {
+  background-color: #F8F3ED;
+  height: auto;
+}
+
+.tool-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+
+.tool-items-logo {
+  width: 80px;
+  height: 80px;
+  background-color: #28446C;
+  border-radius: 10px;
+  margin: 0px 15px 30px 15px;
 }
