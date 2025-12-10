@@ -74,6 +74,7 @@ body {
 @media (min-width: 800px) {
     .menu ul {
       border-top: none;
+      border-bottom: none;
       font-size: 25px;
       padding-top: 30px;
     }
@@ -90,10 +91,6 @@ body {
   font-size: 120%;
   color: #28446C;
   text-decoration: underline;
-}
-
-.menu--element:active {
-  color: #DCEBFA;
 }
 
 /* Main setup*/
@@ -365,7 +362,7 @@ main{
   background-color: #F8F3ED;
   align-items: center;
   width: 350px;
-  margin: auto auto 50px auto;
+  margin: auto auto 20px auto;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -393,4 +390,19 @@ label {
 
 .form--input-message {
   height: 70px;
+}
+
+@media (min-width: 800px) {
+  #main-contact {
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    "contact-tekst form";
+    margin-top: 50px;
+    grid-gap: 30px;
+  }
+  .contact-tekst {
+    width: 400px;
+    margin: auto 0px 220px 0px;
+  }
 }
