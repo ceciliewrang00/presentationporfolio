@@ -36,27 +36,27 @@ body {
   .sitesetup {
     grid-template-areas:
         "header . menu"
-        "main1 main1 main1"
+        "main main main"
         "footer footer footer";
     grid-template-columns: 2fr 2fr 4fr;
     grid-template-rows: 90px auto auto;
   }}
 
 .header { grid-area: header; }
-.menu { grid-area: menu; }
-.main-landingpage { grid-area: main1; }
+.menu   { grid-area: menu; }
+.main   { grid-area: main; }
 .footer { grid-area: footer; }
 
 .logo {
   height: 125%;
-  width: 100px;
+  width: 115px;
   padding: 10px;
   transition: ease-in-out;
   transition-duration: 0.5s;
 }
 
 .logo:hover {
-  width: 115px;
+  width: 135px;
 }
 
 .menu ul {
@@ -95,7 +95,7 @@ body {
 }
 
 /* Main setup*/
-.main-landingpage {
+.main {
   background-color: #F8F3ED;
   display: grid;
   grid-template-areas:
@@ -341,4 +341,18 @@ body {
   ". footer--contact-me-site";
   grid-template-columns: auto auto;
   grid-template-rows: 35px 35px 35px;
+}
+
+/* Contact site */
+label {
+  font-weight: bold;
+}
+
+.form-container {
+  display: flex
+}
+.form {
+  flex-direction: column;
+  background-color: #F8F3ED;
+  height: 300px;
 }
