@@ -22,14 +22,14 @@
     <!-- Indhold -->
     <main class="main">
         <!-- Text and potrat -->
-        <section class="about-me">
-            <div class="about-me--textbox">
+        <section class="text-image">
+            <div class="text-image--textbox">
                 <h1 class="title">About me</h1>
                 <p class="about-me--text">My name is xxxxx, I’m 25, and I study Multimedia Design in Odense. I discovered the impact of good design while working in Munich for Oscar Car Rental, where I represented the customer’s voice as a stakeholder.
                 <br> <br>
                 Curiosity and creativity drive me. I love learning, problem-solving, and exploring new ideas, and I’m passionate about UX, turning creative concepts into practical, user-friendly solutions.</p>
             </div>
-            <div class="potrat"> Dette er en placeholder til mit potrat
+            <div class="text-image--image" id="potrat"> Dette er en placeholder til mit potrat
             </div>
         </section>
         <!-- My toolbox -->
@@ -50,11 +50,14 @@
         <section>
             <h2 class="title"> Uddrag fra anbefaling? </h2>
         </section>
-        <section>
-            <div>
+        <section class="text-image">
+            <div class="text-image--textbox">
                 <h2 class="title"> What inspires me? </h2>
                 <p>I find inspiration in people and the moods they create, in cozy moments with family, and in the colors, scents, and spaces that tell a story. Travel and different cultures ignite my curiosity, while nature, art, and adventure give me energy and perspective. It’s the blend of these experiences that drives me to create, explore, and see the world in new and meaningful ways.</p>
             </div>
+            <video id="inspo-video" class="text-image--image" controls loop autoplay muted>
+                <source src="../image/inspo.mp4" type="video/mp4">A video with images showing what inspires me
+            </video>
         </section>
     </main>
     <!-- Footer -->

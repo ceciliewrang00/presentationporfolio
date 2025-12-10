@@ -409,21 +409,30 @@ label {
 }
 
 /* About me page - Top part */
-.about-me {
+.text-image {
   display: flex;
   flex-direction: column;
   margin: auto;
 }
 
-.about-me--textbox {
+.text-image--textbox {
   width: 470px;
   margin: auto;
 }
 
-.potrat {
+.text-image--image {
+  margin: 30px auto 30px auto;
+  box-shadow: 5px 5px 20px;
+  border-radius: 15px;
+}
+
+#potrat {
   background-color: #F8F3ED;
   height: 400px;
   width: 300px;
+}
+
+.text-image--image {
   margin: 30px auto 30px auto;
   box-shadow: 5px 5px 20px;
   border-radius: 15px;
@@ -431,10 +440,10 @@ label {
 
 /* Big screen - about page top part */
 @media (min-width: 800px) {
-  .about-me {
+  .text-image {
     flex-direction: row;
   }
-  .about-me--textbox {
+  .text-image--textbox {
     margin: 60px auto 30px auto;
   }
 }
@@ -458,4 +467,9 @@ label {
   background-color: #28446C;
   border-radius: 10px;
   margin: 0px 15px 30px 15px;
+}
+
+#inspo-video {
+  height: 300px;
+  width: auto;
 }
