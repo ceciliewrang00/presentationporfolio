@@ -22,11 +22,12 @@
     <!-- Indhold -->
     <main class="main">
         <!-- Side title -->
-        <h1 class="title">Contact</h1>
-        <p>Whether you have questions, are interested in collaborating, or have a project you’d like to discuss, please don’t hesitate to reach out. I’m always happy to hear from you and look forward to connecting!</p>
+        <div class="contact-tekst">
+            <h1 class="title">Contact</h1>
+            <p>Whether you have questions, are interested in collaborating, or have a project you’d like to discuss, please don’t hesitate to reach out. I’m always happy to hear from you and look forward to connecting!</p>
+        </div>
         <!-- Contact form -->
-        <section class="form-container">
-            <form class="form">
+        <section class="form">
                 <h2 class="form--title">Send a message</h2>
                 <label class="form--lable-name">Name</label>
                 <input type="text" class="form--input-name" placeholder="Your name" required>
@@ -34,7 +35,9 @@
                 <input type="email" class="form--input-mail" placeholder="Your e-mail" required>
                 <label class="form--lable-message">Message</label>
                 <input type="text" class="form--input-message" placeholder="Your message" required>
-            </form>
+                <button class="dark-button" type="button" onclick="window.location.href='//en.wikipedia.org/wiki/HTML';"> 
+                    Send message
+                </button>               
         </section>
     </main>
     <!-- Footer -->

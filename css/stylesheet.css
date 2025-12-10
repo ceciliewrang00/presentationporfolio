@@ -49,23 +49,25 @@ body {
 
 .logo {
   height: 125%;
-  width: 115px;
+  width: 110px;
   padding: 10px;
   transition: ease-in-out;
   transition-duration: 0.5s;
 }
 
 .logo:hover {
-  width: 135px;
+  width: 130px;
 }
 
 .menu ul {
   border-top: #F8F3ED 2px solid;
+  border-bottom: #F8F3ED 2px solid;
   list-style: none;
   display: flex;
   font-size: 20px;
   justify-content: center;
-  padding-top: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 /* Media query: 800px+ */
@@ -221,7 +223,7 @@ main{
   color: #F8F3ED;
   border: 1px solid #0A2342;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
   width: 150px;
 }
 
@@ -349,15 +351,46 @@ main{
 }
 
 /* Contact site */
-label {
-  font-weight: bold;
+.contact-tekst {
+  margin: 0px auto 30px auto;
+  padding: 0px 10px 10px 10px;
+  width: 470px;
+  display: flex;
+  flex-direction: column;
 }
 
-.form-container {
-  display: flex
-}
+
 .form {
-  flex-direction: column;
+  padding: 30px;
   background-color: #F8F3ED;
-  height: 300px;
+  align-items: center;
+  width: 350px;
+  margin: auto auto 50px auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 5px 5px 20px;
+}
+
+.form--title {
+  margin-bottom: 25px;
+}
+
+input {
+width: 300px;
+height: 30px;
+padding-left: 10px;
+border: solid 1px #EAD9C5;
+border-radius: 8px;
+margin: 8px 0px 25px 0px;
+}
+
+label {
+  align-self: flex-start;
+  font-weight: bold;  
+}
+
+.form--input-message {
+  height: 70px;
 }
