@@ -172,14 +172,13 @@ main{
 
   #title-landingpage-fixed {
     grid-area: landingpage-fixedtitle;
+    margin-top: 75px;
   }
 
   .titlechange {
     grid-area: landingpagetitle--change;
   }
 }
-
-
 
 /* Project carousel setup */
 .carousel {
