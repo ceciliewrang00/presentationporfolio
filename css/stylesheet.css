@@ -194,7 +194,7 @@ main{
   position: relative;
   height: 500px;
   padding: 0 10%;
-  width: 100%;
+  width: 700px;
   max-width: 900px;
   box-sizing: border-box;
 }
@@ -202,9 +202,8 @@ main{
 /* ITEMS */
 .carousel--viewport--item {
   position: absolute;
-  width: 400px;            /* ét item på mobil */
+  width: 450px;            /* ét item på mobil */
   height: 325px;
-  opacity: 0;
   pointer-events: none;
   display: flex;
   align-items: center;
@@ -212,19 +211,22 @@ main{
   font-size: 1.6rem;
   background-color: #F8F3ED;
   color: #0A2342;
-  transition: opacity .2s;
+  transition: opacity .7s;
   z-index: 0;
-  gap: 20px;
+  gap: 15px;
   border-radius: 5%;
+  box-shadow: 5px 5px 15px;
 }
 
 .dark-button {
+  font-size: 14px;
   background-color: #28446C;
   color: #F8F3ED;
   border: 1px solid #0A2342;
-  padding: 10px;
+  padding: 10px 30px;
   border-radius: 15px;
   width: 150px;
+  text-decoration: none;
 }
 
 .dark-button:hover {
@@ -258,8 +260,8 @@ main{
 }
 
 .carousel--viewport--item--image {
-  width: 300px;
-  height: auto;
+  height: 200px;
+  width: auto;
 }
 
 /* KEYFRAMES */
@@ -310,17 +312,17 @@ main{
     height: 350px;
     padding: 2% 5%;
   }
-  .carousel--viewport--item--image {
-    width: 200px;
-    height: auto;
-  }
+.carousel--viewport--item--image {
+  height: 165px;
+  width: auto;
+}
   .carousel--viewport li {
-    width: 40%;           /* to items side om side */
+    width: 50%;           /* to items side om side */
   }
 
   :root {
-    --left-pos: 5%;       /* venstre item */
-    --right-pos: 50%;     /* højre item */
+    --left-pos: -2%;       /* venstre item */
+    --right-pos: 53%;     /* højre item */
   }
 }
 
@@ -423,7 +425,7 @@ label {
 
 .text-image--textbox {
   width: 470px;
-  margin: auto;
+  margin: auto; 
 }
 
 .about-me--text {
@@ -431,21 +433,24 @@ label {
 }
 
 .text-image--image {
-  margin: 30px auto 0 auto;
+  margin: 30px auto 50px auto;
   box-shadow: 5px 5px 20px;
   border-radius: 15px;
+  width: 300px;
+  height: auto;
+}
+
+.text-image--image-no-shadow {
+  margin: 50px auto 50px auto;
+  border-radius: 15px;
+  height: 300px;
+  width: auto;
 }
 
 #potrat {
   background-color: #F8F3ED;
   height: 400px;
   width: 300px;
-}
-
-.text-image--image {
-  margin: 30px auto 30px auto;
-  box-shadow: 5px 5px 20px;
-  border-radius: 15px;
 }
 
 /* Big screen - about page top part */
@@ -514,8 +519,8 @@ label {
 
 .projectcard--img {
   margin-top: 40px;
-  width: 200px;
-  height: auto;
+  height: 125px;
+  width: auto;
 }
 
 .projectcard--title {
