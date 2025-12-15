@@ -26,7 +26,7 @@ body {
       "menu"
       "main"
       "footer";
-    grid-template-rows: 80px 50px auto 50px;
+    grid-template-rows: 80px 50px auto auto;
     grid-gap: 3px;
     margin: 0 auto;
 }
@@ -117,12 +117,18 @@ main{
 }
 #title-landingpage{
   grid-area: title-landingpage;
-  background: url(../image/palmer.webp);
-  height: 350px;
+  background: url(../image/start-img.webp);
+  background-size: 100%;
+  height: 300px;
   width: auto;
+  background-repeat: no-repeat;
 }
 #landingpage-startimage {
   display: none;
+}
+
+#title-landingpage-fixed {
+  color: #F8F3ED;
 }
 
 .landingpagetitle--change {
@@ -159,7 +165,7 @@ main{
   #landingpage-startimage {
     display: block; /*  ←  VIGTIG! Ellers forbliver den skjult */
     grid-area: landingpage-startimage;
-    width: 100%;
+    width: 75%;
   }
 
   #landingpage-startimage img {
@@ -173,6 +179,7 @@ main{
   #title-landingpage-fixed {
     grid-area: landingpage-fixedtitle;
     margin-top: 75px;
+    color: #28446C;
   }
 
   .titlechange {
@@ -194,7 +201,7 @@ main{
   position: relative;
   height: 500px;
   padding: 0 10%;
-  width: 700px;
+  width: 550px;
   max-width: 900px;
   box-sizing: border-box;
 }
@@ -260,7 +267,7 @@ main{
 }
 
 .carousel--viewport--item--image {
-  height: 200px;
+  height: 180px;
   width: auto;
 }
 
@@ -332,6 +339,7 @@ main{
 }
 .footer--phone {grid-area: footer--phone;}
 .footer--e-mail {grid-area: footer--e-mail;}
+.footer--linked-in {grid-area: footer--linked-in;}
 .footer--menu {
   grid-area: footer--menu;
   font-size: 20px;
@@ -344,15 +352,36 @@ main{
 .footer {
   padding-top: 50px;
   background-color: #F8F3ED;
-  height: 200px;
+  height: 300px;
+  display: grid;
+  grid-template-areas: 
+  "footer--contact-me"
+  "footer--phone"
+  "footer--e-mail"
+  "footer--linked-in"
+  "."
+  "footer--menu"
+  "footer--about-me"
+  "footer--projects"
+  "footer--contact-me-site";
+  grid-template-columns: auto;
+  grid-template-rows: 35px 25px 25px 25px 10px 35px 25px 25px 25px;
+}
+
+@media (min-width: 800px) {
+  .footer{
+  padding-top: 50px;
+  background-color: #F8F3ED;
+  height: 250px;
   display: grid;
   grid-template-areas: 
   "footer--contact-me footer--menu"
   "footer--phone footer--about-me"
   "footer--e-mail footer--projects"
-  ". footer--contact-me-site";
+  "footer--linked-in footer--contact-me-site";
   grid-template-columns: auto auto;
-  grid-template-rows: 35px 35px 35px;
+  grid-template-rows: 35px 35px 35px 35px;
+  }
 }
 
 /* Contact site */
