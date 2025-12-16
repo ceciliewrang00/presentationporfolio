@@ -186,7 +186,7 @@ main{
   #landingpage-startimage {
     display: block; /*  ←  VIGTIG! Ellers forbliver den skjult */
     grid-area: landingpage-startimage;
-    width: 70%;
+    width: 60%;
   }
 
   #landingpage-startimage img {
