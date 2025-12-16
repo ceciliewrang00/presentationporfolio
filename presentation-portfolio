@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>c-wrang</title>
-    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body class="sitesetup">
@@ -24,15 +25,14 @@
         <!-- Text and potrat -->
         <section class="text-image">
             <div class="text-image--textbox">
-                <h1 class="title">UCL website update</h1>
+                <h1 class="title">Prototype og plakat for Wordfestival</h1>
                 <p class="about-me--text"> 
-                    In my job as a student assistant in the international team at UCL, I work on updating their website. I adjust both the design and the tone of voice to ensure it fits the target audience. 
-                    <br><br>
-                    The project is not a finished product yet, as there are still questions awaiting answers, images that need to be found, and possibly a video that needs to be produced.</p>
-                <a class="dark-button" href="https://www.mitucl.dk/studieservice/international-team/udlandsophold">Current website</a>
-                <a class="dark-button" href="https://www.figma.com/proto/dPDUtWtTuHz3lMlk4J1Djh/UCL-project?page-id=0%3A1&node-id=1-370&viewport=40%2C256%2C0.04&t=lLZNGwUuSs7akIY3-1&scaling=scale-down-width&content-scaling=fixed">Try prototype</a>
+                Our second project in the first semester focused on Wordfestival. We were given a case related to book sales, while also considering that the festival aims to be a digital break which challenged us to think outside the box.
+                <br><br>
+                Within our group, we divided the tasks between us. I was responsible for creating the prototype and designing the poster, with feedback from the group on minor adjustments. The photos and background illustrations were created by other members of the group.                </p>
+                <a class="dark-button" href="https://www.figma.com/design/e30XxtfUu88KwH9SJNVQ3t/Wordfestival?node-id=0-1&t=qNr121uoI1HpdSX4-1">View project</a>
             </div>
-            <img class="text-image--image-no-shadow" src="../image/ucl-project.webp" alt="Computer with new design for UCL website open">
+            <img class="text-image--image-no-shadow" src="../image/wordfestival.webp" alt="Figmafile from Wordfestival project showing prototype and poster">
         </section>
     </main>
     <!-- Footer -->

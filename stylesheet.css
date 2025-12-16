@@ -1,22 +1,29 @@
 /* Site setup*/
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  /* prevent horizontal scroll on mobile and give slight page padding */
+  overflow-x: hidden;
+  padding-inline: 12px;
+  height: 100%;
 }
 
 body {
-    max-width: 1200px;
-    background-color: #EAD9C5;
-    color: #0A2342;
-    font-family: sans-serif;
-    margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #EAD9C5;
+  color: #0A2342;
+  font-family: sans-serif;
 }
 
 .sitesetup > * {
-    background-color: #EAD9C5;
-    text-align: center;
-    font-size: 16px;
+  background-color: #EAD9C5;
+  text-align: center;
+  font-size: 16px;
 }
 
 .sitesetup {
@@ -51,12 +58,12 @@ body {
   height: 125%;
   width: 115px;
   padding: 10px;
-  transition: ease-in-out;
-  transition-duration: 0.5s;
+  transition: transform .25s ease-in-out;
+  transform-origin: left center;
 }
 
 .logo:hover {
-  width: 135px;
+  transform: scale(1.15);
 }
 
 .menu ul {
@@ -64,6 +71,7 @@ body {
   border-bottom: #F8F3ED 2px solid;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   font-size: 20px;
   justify-content: center;
   padding: 15px 0 10px 0;
@@ -117,14 +125,13 @@ main{
 }
 #title-landingpage{
   grid-area: title-landingpage;
-  background: url(../image/start-img.webp);
-  background-size: 100%;
-  height: 300px;
-  width: auto;
-  background-repeat: no-repeat;
+  background: url(../image/start-img.webp) left / cover no-repeat;
+  height: 250px;
+  padding: 28px 0;
 }
 #landingpage-startimage {
   display: none;
+  width: auto;
 }
 
 #title-landingpage-fixed {
@@ -135,10 +142,24 @@ main{
   margin-bottom: 50px;
 }
 
+#title-landingpage-fixed,
+.landingpagetitle--change {
+  white-space: normal;
+  overflow-wrap: normal;   
+  word-wrap: normal;      
+  word-break: normal;      
+  hyphens: none;          
+  max-width: 100%;
+  margin: 0;
+}
+
 .landingpagetitle--change::after {
   color: #0A2342;
   content: "FRONTEND DESIGN";
   animation: changetext 10s infinite;
+  display: inline-block;
+  white-space: normal;
+  max-width: 100%;
 }
 
 @keyframes changetext {
@@ -165,7 +186,7 @@ main{
   #landingpage-startimage {
     display: block; /*  ←  VIGTIG! Ellers forbliver den skjult */
     grid-area: landingpage-startimage;
-    width: 75%;
+    width: 70%;
   }
 
   #landingpage-startimage img {
@@ -195,13 +216,14 @@ main{
   align-items: center;     /* centrerer vertikalt */
   gap: 15px;
   height: 500px;
+  padding-bottom: 18px;
 }
 
 .carousel--viewport {
   position: relative;
   height: 500px;
-  padding: 0 10%;
-  width: 550px;
+  padding: 0 6%;
+  width: 110%;
   max-width: 900px;
   box-sizing: border-box;
 }
@@ -209,7 +231,7 @@ main{
 /* ITEMS */
 .carousel--viewport--item {
   position: absolute;
-  width: 450px;            /* ét item på mobil */
+  width: 290px;            /* ét item på mobil */
   height: 325px;
   pointer-events: none;
   display: flex;
@@ -324,11 +346,11 @@ main{
   width: auto;
 }
   .carousel--viewport li {
-    width: 50%;           /* to items side om side */
+    width: 40%;           /* to items side om side */
   }
 
   :root {
-    --left-pos: -2%;       /* venstre item */
+    --left-pos: 8%;       /* venstre item */
     --right-pos: 53%;     /* højre item */
   }
 }
@@ -353,6 +375,7 @@ main{
   padding-top: 50px;
   background-color: #F8F3ED;
   height: 300px;
+  width: 100%;
   display: grid;
   grid-template-areas: 
   "footer--contact-me"
@@ -386,11 +409,13 @@ main{
 
 /* Contact site */
 .contact-tekst {
-  margin: 0px auto 30px auto;
-  padding: 0px 10px 10px 10px;
-  width: 470px;
+  margin: 0 auto 24px auto;
+  padding: 0 12px;
+  width: 100%;
+  max-width: 470px;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 
@@ -398,7 +423,7 @@ main{
   padding: 30px;
   background-color: #F8F3ED;
   align-items: center;
-  width: 350px;
+  width: 330px;
   margin: auto auto 20px auto;
   height: auto;
   display: flex;
@@ -455,6 +480,13 @@ label {
 .text-image--textbox {
   width: 470px;
   margin: auto; 
+  margin: 0 auto 24px auto;
+  padding: 0 12px;
+  width: 100%;
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .about-me--text {
@@ -472,7 +504,7 @@ label {
 .text-image--image-no-shadow {
   margin: 50px auto 50px auto;
   border-radius: 15px;
-  height: 300px;
+  height: 200px;
   width: auto;
 }
 
@@ -523,7 +555,7 @@ label {
 /* Project page */ 
 
 .project-intro {
-  width: 450px;
+  width: auto;
   margin: 0 auto 30px auto;
 }
 
@@ -533,9 +565,8 @@ label {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
+  gap: 12px;
+  margin: auto;
 }
 
 .projectcard {
@@ -544,6 +575,8 @@ label {
   height: 300px;
   border-radius: 15px;
   box-shadow: 5px 5px 10px; 
+  padding: none;
+  min-width: auto;
 }
 
 .projectcard--img {
